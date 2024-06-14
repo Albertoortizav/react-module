@@ -1,24 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
 padding:0;
 margin:0;
 box-sizing: border-box;
 }
 
-body{
+/*body{
     background-color: #0f0f0f;
     color:#fff
-}
+}*/
 
-#main-layout{
+/*#main-layout{
     width: 100%;
     min-height:100dvh;
     padding:1rem;
     display: grid;
    grid-template-columns: 20% 1fr;
    grid-template-rows: 3.2rem 1fr;
-}
+}*/
 
-#navbar{
+/*#navbar{
     grid-column: 1 / 3;
 
     display:grid;
@@ -30,7 +33,7 @@ body{
    align-items: center;
    gap:0.3rem;
    padding-left: 1rem;
-}
+}*/
 #search-container{
     display:flex;
     justify-content: center;
@@ -61,10 +64,10 @@ body{
 #menu .menu-item{
     padding:1rem;
     border-radius: 20px;
-display: flex;
-flex-direction: row;
-gap:0.5rem;
-align-items: center;
+   display: flex;
+   flex-direction: row;
+   gap:0.5rem;
+   align-items: center;
 }
 #menu .menu-item:hover{
     background-color: #282828;
@@ -85,36 +88,37 @@ align-items: center;
     background-color: #282828;
 }
 
+#videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
 .video-card{
     display: flex;
     flex-direction: column;
-    gap:0.5
+    gap:0.5rem;
 }
 .video-card img{
     width: 100%;
     border-radius: 10px;
     object-fit:cover;
-}
-
-#videos{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap:1rem;
-    padding-top: 1rem;
+    aspect-ratio: 16 / 9;
 }
 
 .video-card footer{
     display:grid;
     gap:0.5rem;
-    grid-template-columns: 2rem 1fr;
+    grid-template-columns: 3rem 1fr;
 }
 .video-card footer img{
-   grid-column: 1/2;
-   width: 2rem;
-   height: 2rem;
-   border-radius: 50%;
+   grid-column: 1 / 2;
 }
 .video-card-title,
 .video-card-channel{
-   grid-column: 2/3;
+   grid-column: 2 / 3;
+}
+.special{
+    border:1px solid red
 }

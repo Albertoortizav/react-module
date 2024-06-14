@@ -10,10 +10,10 @@ export default function Categories(){
     ]
     return(
     
-        <div id="categories list">
+        <div className="flex flex-row gap-4">
         {categories.map((category)=>{
             return(
-                <span key={`category-${category}`} className="category">
+                <span key={`category-${category}`} className="p-[0.5rem_1rem] rounded-[20px] bg-[#282828]">
                     {category}
                 </span>
             )
